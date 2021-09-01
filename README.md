@@ -1,4 +1,5 @@
-# The Wheather App 🌦️ 
+# The Weather App 🌦️ 
+With the Weather App it is possible to search for a specific location and toggle displaying the data in Fahrenheit or Celsius.
 
 This is The Odin Project's [curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/weather-app) from Full Stack Javascript Path
 
