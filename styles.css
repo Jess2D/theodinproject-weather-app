@@ -1,6 +1,7 @@
 body{
     background-color:#a598ee;
     color: #DEDAF9;
+    font-family: 'Open Sans', sans-serif; 
 }
 
 fieldset{
@@ -17,6 +18,7 @@ fieldset{
 
 
 legend{    
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 72px;
     line-height: 1;
     color: #fff;
