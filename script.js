@@ -1,6 +1,6 @@
 
 let form = document.getElementById("form");
-let data;
+let dataName;
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -9,20 +9,18 @@ form.addEventListener("submit", function(event){
     .then(response  => response.json())
     .then(response => {
       console.log(response);
-       data = response.main["temp"]
-       const location = document.getElementById("location")
-       console.log(data)
-       location.innerHTML = data
+       dataName = response.name
+       viewName(dataName)
     })
 
 
 
 });
 
-const viewLocation = viewLocation => {
+function viewName(name){
+  const locationName = name
   const location = document.getElementById("location")
-  console.log(data)
-  location.innerHTML = data
+  location.innerHTML = locationName
 }
 
 
