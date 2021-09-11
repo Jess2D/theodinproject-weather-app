@@ -1,6 +1,6 @@
 
 let form = document.getElementById("form");
-let dataName;
+let dataName, dataTemperature;
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -10,7 +10,11 @@ form.addEventListener("submit", function(event){
     .then(response => {
       console.log(response);
        dataName = response.name
+       dataTemperature = {...response.temp}
+       console.log(dataTemperature)
+       console.log(dataTemperature["fells_like"])
        viewName(dataName)
+       temperature(dataTemperature)
     })
 
 
@@ -19,8 +23,14 @@ form.addEventListener("submit", function(event){
 
 function viewName(name){
   const locationName = name
-  const location = document.getElementById("location")
-  location.innerHTML = locationName
+  const nameID = document.getElementById("name")
+  nameID.innerHTML = locationName
+}
+
+function temperature(temperature){
+  const fells_Like = temperature["feels_like"]
+  const temperatureID = document.getElementById("temperature")
+  temperatureID.innerHTML = fells_Like
 }
 
 
