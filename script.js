@@ -10,7 +10,7 @@ form.addEventListener("submit", function(event){
     .then(response => {
       console.log(response);
        dataName = response.name
-       dataTemperature = {...response.temp}
+       dataTemperature = {...response.main}
        console.log(dataTemperature)
        console.log(dataTemperature["fells_like"])
        viewName(dataName)
