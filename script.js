@@ -30,8 +30,13 @@ function viewName(name){
 function temperature(temperature){
   const fells_Like = temperature["feels_like"]
   const temperatureID = document.getElementById("temperature")
-  temperatureID.innerHTML = fells_Like
+  const C = getCelsius(fells_Like)
+  temperatureID.innerHTML = "Fells like: "+ C
 }
 
+function getCelsius(temp){
+    const c = (temp-32)*0.555555556
+    return c;
+}
 
 
