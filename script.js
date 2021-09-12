@@ -32,7 +32,7 @@ function ViewName(name){
 function Temperature(tempt){
   const temp = tempt["temp"]
   const temperatureID = document.getElementById("temperature")
-  temperatureID.innerHTML = "Temp: "+temp
+  temperatureID.innerHTML = "Temp: "+ Math.round(temp)
 }
 
 function FellsLike(temperature){
@@ -41,8 +41,10 @@ function FellsLike(temperature){
   fellsLikeID.innerHTML = "Fells like: "+ Math.round(fells_Like)
 }
 
-function temperature(temperature){
-
+function TemperatureMax(temperature){
+  const max = temperature["temp_max"]
+  const maxID = document.getElementById("maxID")
+  maxID.innerHTML = "Max: "+ Math.round(max)
 }
 
 
