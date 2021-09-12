@@ -12,6 +12,7 @@ form.addEventListener("submit", function(event){
       console.log(response);
        dataName = response.name
        dataTemperature = {...response.main}
+       dataWeather = {...response.weather}
        console.log(response.main["temp"])
        ViewName(dataName)
        Temperature(dataTemperature)
@@ -20,7 +21,7 @@ form.addEventListener("submit", function(event){
        FellsLike(dataTemperature)
        Pressure(dataTemperature)
        Humidity(dataTemperature)
-     
+       Weather(dataWeather)
     })
 
 
@@ -68,4 +69,11 @@ function Humidity(temperature){
   const humidityID = document.getElementById("humidity")
   humidityID.innerHTML = "Humidity: "+ Math.round(humidity)
 }
+
+function Weather(weather){
+  const description = weather[0].description
+  const weatherID = document.getElementById("weather")
+  weatherID.innerHTML = "Weather: "+ description
+}
+
 
