@@ -15,6 +15,8 @@ form.addEventListener("submit", function(event){
        console.log(response.main["temp"])
        ViewName(dataName)
        Temperature(dataTemperature)
+       TemperatureMax(dataTemperature)
+       TemperatureMin(dataTemperature)
        FellsLike(dataTemperature)
      
     })
@@ -43,9 +45,19 @@ function FellsLike(temperature){
 
 function TemperatureMax(temperature){
   const max = temperature["temp_max"]
-  const maxID = document.getElementById("maxID")
+  const maxID = document.getElementById("temperatureMax")
   maxID.innerHTML = "Max: "+ Math.round(max)
 }
 
+function TemperatureMin(temperature){
+  const min = temperature["temp_min"]
+  const minID = document.getElementById("temperatureMin")
+  minID.innerHTML = "Min: "+ Math.round(min)
+}
 
+function Pressure(temperature){
+  const pressure = temperature["temp_min"]
+  const pressureID = document.getElementById("temperatureMin")
+  pressureID.innerHTML = "Pressure: "+ Math.round(pressure)
+}
 
