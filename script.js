@@ -18,6 +18,7 @@ form.addEventListener("submit", function(event){
        TemperatureMax(dataTemperature)
        TemperatureMin(dataTemperature)
        FellsLike(dataTemperature)
+       Pressure(dataTemperature)
      
     })
 
@@ -57,7 +58,7 @@ function TemperatureMin(temperature){
 
 function Pressure(temperature){
   const pressure = temperature["temp_min"]
-  const pressureID = document.getElementById("temperatureMin")
+  const pressureID = document.getElementById("pressure")
   pressureID.innerHTML = "Pressure: "+ Math.round(pressure)
 }
 
