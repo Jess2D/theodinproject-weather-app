@@ -19,6 +19,7 @@ form.addEventListener("submit", function(event){
        TemperatureMin(dataTemperature)
        FellsLike(dataTemperature)
        Pressure(dataTemperature)
+       Humidity(dataTemperature)
      
     })
 
@@ -57,8 +58,14 @@ function TemperatureMin(temperature){
 }
 
 function Pressure(temperature){
-  const pressure = temperature["temp_min"]
+  const pressure = temperature["pressure"]
   const pressureID = document.getElementById("pressure")
   pressureID.innerHTML = "Pressure: "+ Math.round(pressure)
+}
+
+function Humidity(temperature){
+  const humidity = temperature["humidity"]
+  const humidityID = document.getElementById("humidity")
+  humidityID.innerHTML = "Humidity: "+ Math.round(humidity)
 }
 
