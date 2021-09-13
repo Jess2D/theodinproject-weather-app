@@ -28,6 +28,7 @@ form.addEventListener("submit", function(event){
        WindSpeed(dataWind)
        WindSDeg(dataWind)
        Sunrise(dataSys)
+       Sunset(dataSys)
     })
 
 
@@ -109,8 +110,21 @@ function WindSDeg(wind){
   windDegID.innerHTML ="Wind deg: " + degToCompass(deg)
 }
 
-function  Sunrise(sys){
+function Sunrise(sys){
   const sunrise = sys.sunrise
   const sunriseID = document.getElementById("sunrise")
-  sunriseID.innerHTML ="Sunrise: " + sunrise
+  sunriseID.innerHTML ="Sunrise: " + getTime(sunrise)
+}
+
+function Sunset(sys){
+  const sunset = sys.sunset
+  const sunsetID = document.getElementById("sunset")
+  sunsetID.innerHTML ="Sunset: " + getTime(sunset)
+}
+
+function getTime(time){
+  let unix_timestamp = time
+  let date = new Date(unix_timestamp * 1000);
+  let newtime = date.toLocaleTimeString('en-US') 
+  return newtime.replace(/:\d+ /, ' ');
 }
