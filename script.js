@@ -14,6 +14,7 @@ form.addEventListener("submit", function(event){
        dataTemperature = {...response.main}
        dataWeather = {...response.weather}
        dataWind = {...response.wind}
+       dataSys = {...response.sys}
        console.log(response.main["temp"])
        ViewName(dataName)
        Temperature(dataTemperature)
@@ -26,6 +27,7 @@ form.addEventListener("submit", function(event){
        WeatherIcon(dataWeather)
        WindSpeed(dataWind)
        WindSDeg(dataWind)
+       Sunrise(dataSys)
     })
 
 
@@ -105,4 +107,10 @@ function WindSDeg(wind){
   const deg = wind.deg
   const windDegID = document.getElementById("windDeg")
   windDegID.innerHTML ="Wind deg: " + degToCompass(deg)
+}
+
+function  Sunrise(sys){
+  const sunrise = sys.sunrise
+  const sunriseID = document.getElementById("sunrise")
+  sunriseID.innerHTML ="Sunrise: " + sunrise
 }
