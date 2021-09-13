@@ -1,6 +1,6 @@
 
 let form = document.getElementById("form");
-let dataName, dataFellsLike, dataTemperature, dataTemperatureMax, dataTemperatureMin, dataWeather, dataWeatherIcon, dataSunrise, dataSunset;
+let dataName, dataTemperature,  dataWeather, dataSunrise, dataSunset;
 let dataChanceRain, dataHumidity, dataWind, dataPrecipitation, dataUvIndex
 
 form.addEventListener("submit", function(event){
@@ -13,6 +13,7 @@ form.addEventListener("submit", function(event){
        dataName = response.name
        dataTemperature = {...response.main}
        dataWeather = {...response.weather}
+       dataWind = {...response.wind}
        console.log(response.main["temp"])
        ViewName(dataName)
        Temperature(dataTemperature)
@@ -23,6 +24,8 @@ form.addEventListener("submit", function(event){
        Humidity(dataTemperature)
        Weather(dataWeather)
        WeatherIcon(dataWeather)
+       WindSpeed(dataWind)
+       WindSDeg(dataWind)
     })
 
 
@@ -38,37 +41,37 @@ function ViewName(name){
 function Temperature(tempt){
   const temp = tempt["temp"]
   const temperatureID = document.getElementById("temperature")
-  temperatureID.innerHTML = "Temp: "+ Math.round(temp)
+  temperatureID.innerHTML = "Temp: "+ Math.round(temp) +"°C"
 }
 
 function FellsLike(temperature){
   const fells_Like = temperature["feels_like"]
   const fellsLikeID = document.getElementById("fellsLike")
-  fellsLikeID.innerHTML = "Fells like: "+ Math.round(fells_Like)
+  fellsLikeID.innerHTML = "Fells like: "+ Math.round(fells_Like) +"°C"
 }
 
 function TemperatureMax(temperature){
   const max = temperature["temp_max"]
   const maxID = document.getElementById("temperatureMax")
-  maxID.innerHTML = "Max: "+ Math.round(max)
+  maxID.innerHTML = "Max: "+ Math.round(max)+"°C"
 }
 
 function TemperatureMin(temperature){
   const min = temperature["temp_min"]
   const minID = document.getElementById("temperatureMin")
-  minID.innerHTML = "Min: "+ Math.round(min)
+  minID.innerHTML = "Min: "+ Math.round(min)+"°C"
 }
 
 function Pressure(temperature){
   const pressure = temperature["pressure"]
   const pressureID = document.getElementById("pressure")
-  pressureID.innerHTML = "Pressure: "+ Math.round(pressure)
+  pressureID.innerHTML = "Pressure: "+ Math.round(pressure) +" hPa"
 }
 
 function Humidity(temperature){
   const humidity = temperature["humidity"]
   const humidityID = document.getElementById("humidity")
-  humidityID.innerHTML = "Humidity: "+ Math.round(humidity)
+  humidityID.innerHTML = "Humidity: "+ Math.round(humidity) +" %"
 }
 
 function Weather(weather){
@@ -83,4 +86,23 @@ function WeatherIcon(weather){
   weatherIconID.innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png"/>`
 }
 
+function WindSpeed(wind){
+  const speed = wind.speed
+  const windSpeedID = document.getElementById("windSpeed")
+  console.log(speed)
+  windSpeedID.innerHTML ="Wind speed: " +((speed*3.6).toFixed(2))+ " km/h"
+}
 
+
+function degToCompass(num) {
+  var val = Math.floor((num / 22.5) + 0.5);
+  var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+  return arr[(val % 16)];
+}
+
+
+function WindSDeg(wind){
+  const deg = wind.deg
+  const windDegID = document.getElementById("windDeg")
+  windDegID.innerHTML ="Wind deg: " + degToCompass(deg)
+}
