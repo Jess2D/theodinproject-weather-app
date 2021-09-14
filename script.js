@@ -48,7 +48,7 @@ function ViewName(name){
 function Temperature(tempt){
   const temp = tempt["temp"]
   const temperatureID = document.getElementById("temperature")
-  temperatureID.innerHTML = "Temp: "+ Math.round(temp) +"°C"
+  temperatureID.innerHTML = Math.round(temp) +"°C"
 }
 
 function FellsLike(temperature){
@@ -60,13 +60,13 @@ function FellsLike(temperature){
 function TemperatureMax(temperature){
   const max = temperature["temp_max"]
   const maxID = document.getElementById("temperatureMax")
-  maxID.innerHTML = "Max: "+ Math.round(max)+"°C"
+  maxID.innerHTML ="| "+ Math.round(max)+"°C"
 }
 
 function TemperatureMin(temperature){
   const min = temperature["temp_min"]
   const minID = document.getElementById("temperatureMin")
-  minID.innerHTML = "Min: "+ Math.round(min)+"°C"
+  minID.innerHTML = Math.round(min)+"°C"
 }
 
 function Pressure(temperature){
@@ -84,7 +84,7 @@ function Humidity(temperature){
 function Weather(weather){
   const description = weather[0].description
   const weatherID = document.getElementById("weather")
-  weatherID.innerHTML = "Weather: "+ description
+  weatherID.innerHTML = description
 }
 
 function WeatherIcon(weather){
@@ -136,7 +136,7 @@ function getTime(time){
 function Country(sys){
   const country = sys.country
   const countryID = document.getElementById("country")
-  countryID.innerHTML =  country
+  countryID.innerHTML =  " ," + country
 }
 
 /*function Emoj(sys){

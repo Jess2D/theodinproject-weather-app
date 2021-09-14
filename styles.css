@@ -78,3 +78,16 @@ legend{
 .content{
     flex-direction: column;
 }
+
+.main{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sys, .descpt, .minMax{
+    display: flex;
+    flex-direction: row;
+
+}
