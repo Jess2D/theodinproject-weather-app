@@ -23,6 +23,7 @@ legend{
     line-height: 1;
     color: #fff;
     margin-bottom: 60px;
+    align-items: center;
 }
 
 .inner-form{
@@ -37,6 +38,9 @@ legend{
     align-items: center;
 }
 
+#form{
+    width: 80%;
+}
 .container{
     min-height: 100vh;
     position: relative;
@@ -78,7 +82,7 @@ legend{
 
 .content{
     flex-direction: column;
-    padding-bottom: 2.5rem;  
+    padding-bottom: 15.5rem;  
 }
 
 .main{
@@ -131,6 +135,7 @@ legend{
     font-size: 24px;
     color: #fff;
     font-weight: 600;
+    padding-bottom: 4.5rem;
 }
 
 .footer a:link {
