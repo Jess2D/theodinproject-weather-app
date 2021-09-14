@@ -97,7 +97,7 @@ function WindSpeed(wind){
   const speed = wind.speed
   const windSpeedID = document.getElementById("windSpeed")
   console.log(speed)
-  windSpeedID.innerHTML ="Wind speed: " +((speed*3.6).toFixed(2))+ " km/h"
+  windSpeedID.innerHTML = "Wind: "+((speed*3.6).toFixed(2))+ "km/h"
 }
 
 
@@ -111,7 +111,7 @@ function degToCompass(num) {
 function WindSDeg(wind){
   const deg = wind.deg
   const windDegID = document.getElementById("windDeg")
-  windDegID.innerHTML ="Wind deg: " + degToCompass(deg)
+  windDegID.innerHTML = "  "+degToCompass(deg)
 }
 
 function Sunrise(sys){
