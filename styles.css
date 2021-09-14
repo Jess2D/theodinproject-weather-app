@@ -91,3 +91,7 @@ legend{
     flex-direction: row;
 
 }
+
+#weather{
+    font-size: 31px;
+}

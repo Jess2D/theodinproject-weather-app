@@ -60,13 +60,13 @@ function FellsLike(temperature){
 function TemperatureMax(temperature){
   const max = temperature["temp_max"]
   const maxID = document.getElementById("temperatureMax")
-  maxID.innerHTML ="| "+ Math.round(max)+"°C"
+  maxID.innerHTML ="|  Max: "+ Math.round(max)+"°C"
 }
 
 function TemperatureMin(temperature){
   const min = temperature["temp_min"]
   const minID = document.getElementById("temperatureMin")
-  minID.innerHTML = Math.round(min)+"°C"
+  minID.innerHTML = "Min: " +Math.round(min)+"°C"
 }
 
 function Pressure(temperature){
