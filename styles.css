@@ -99,3 +99,13 @@ legend{
 #temperature{
     font-size: 64px;
 }
+
+.grid{
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+}
