@@ -1,7 +1,9 @@
 
+//import {countryCodeEmoji} from 'country-code-emoji'
 let form = document.getElementById("form");
 let dataName, dataTemperature,  dataWeather, dataSunrise, dataSunset;
-let dataChanceRain, dataHumidity, dataWind, dataPrecipitation, dataUvIndex
+let dataChanceRain, dataHumidity, dataWind, dataPrecipitation, dataUvIndex;
+
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -29,6 +31,8 @@ form.addEventListener("submit", function(event){
        WindSDeg(dataWind)
        Sunrise(dataSys)
        Sunset(dataSys)
+       Country(dataSys)
+       //Emoj(dataSys)
     })
 
 
@@ -125,6 +129,18 @@ function Sunset(sys){
 function getTime(time){
   let unix_timestamp = time
   let date = new Date(unix_timestamp * 1000);
-  let newtime = date.toLocaleTimeString('en-US') 
-  return newtime.replace(/:\d+ /, ' ');
+  let newtime = date.toLocaleTimeString('en-US',{hour: '2-digit', minute: '2-digit'}) 
+  return newtime
 }
+
+function Country(sys){
+  const country = sys.country
+  const countryID = document.getElementById("country")
+  countryID.innerHTML =  country
+}
+
+/*function Emoj(sys){
+  const emoj = sys.country
+  const emojID = document.getElementById("emoj")
+  emojID.innerHTML =  countryCodeEmoji(emoj);
+}*/
