@@ -3,6 +3,7 @@
 import { Temperature, TemperatureMax, TemperatureMin,FellsLike, Pressure, Humidity } from "./temperature";
 import {Weather, Weather} from "./weather.js"
 import {WindSpeed, WindSDeg} from "/.wind.js"
+import {Country, Sunset, Sunrise} from "./sys"
 
 let form = document.getElementById("form");
 let dataName, dataTemperature,  dataWeather;
@@ -47,35 +48,5 @@ function ViewName(name){
   nameID.innerHTML = locationName
 }
 
-function Sunrise(sys){
-  const sunrise = sys.sunrise
-  const sunriseID = document.getElementById("sunrise")
-  sunriseID.innerHTML ="Sunrise: " + getTime(sunrise)
-}
-
-function Sunset(sys){
-  const sunset = sys.sunset
-  const sunsetID = document.getElementById("sunset")
-  sunsetID.innerHTML ="Sunset: " + getTime(sunset)
-}
-
-function getTime(time){
-  let unix_timestamp = time
-  let date = new Date(unix_timestamp * 1000);
-  let newtime = date.toLocaleTimeString('en-US',{hour: '2-digit', minute: '2-digit'}) 
-  return newtime
-}
-
-function Country(sys){
-  const country = sys.country
-  const countryID = document.getElementById("country")
-  countryID.innerHTML =  " ," + country
-}
-
-/*function Emoj(sys){
-  const emoj = sys.country
-  const emojID = document.getElementById("emoj")
-  emojID.innerHTML =  countryCodeEmoji(emoj);
-}*/
 
 export default script;
