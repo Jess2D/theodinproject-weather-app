@@ -9,3 +9,8 @@ function Weather(weather){
     const weatherIconID = document.getElementById("weatherIcon")
     weatherIconID.innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png"/>`
   }
+
+  module.exports = {
+    WeatherIcon: WeatherIcon,
+    Weather: Weather,
+  };

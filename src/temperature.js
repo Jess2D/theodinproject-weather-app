@@ -37,4 +37,12 @@ function Temperature(tempt){
   }
   
 
-  export default temperature.js
+  module.exports = {
+    Temperature : Temperature, 
+    TemperatureMax: TemperatureMax, 
+    TemperatureMin :TemperatureMin,
+    FellsLike : FellsLike, 
+    Pressure: Pressure, 
+    Humidity :Humidity
+    
+  };

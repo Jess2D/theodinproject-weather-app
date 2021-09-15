@@ -1,11 +1,11 @@
 
 //import {countryCodeEmoji} from 'country-code-emoji'
 import { Temperature, TemperatureMax, TemperatureMin,FellsLike, Pressure, Humidity } from "./temperature";
-import {} from temperature
-let form = document.getElementById("form");
-let dataName, dataTemperature,  dataWeather, dataSunrise, dataSunset;
-let dataChanceRain, dataHumidity, dataWind, dataPrecipitation, dataUvIndex;
+import {Weather, Weather} from "./weather.js"
+import {WindSpeed, WindSDeg} from "/.wind.js"
 
+let form = document.getElementById("form");
+let dataName, dataTemperature,  dataWeather;
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -45,29 +45,6 @@ function ViewName(name){
   const locationName = name
   const nameID = document.getElementById("name")
   nameID.innerHTML = locationName
-}
-
-
-
-function WindSpeed(wind){
-  const speed = wind.speed
-  const windSpeedID = document.getElementById("windSpeed")
-  console.log(speed)
-  windSpeedID.innerHTML = "Wind: "+((speed*3.6).toFixed(2))+ "km/h"
-}
-
-
-function degToCompass(num) {
-  var val = Math.floor((num / 22.5) + 0.5);
-  var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-  return arr[(val % 16)];
-}
-
-
-function WindSDeg(wind){
-  const deg = wind.deg
-  const windDegID = document.getElementById("windDeg")
-  windDegID.innerHTML = "  "+degToCompass(deg)
 }
 
 function Sunrise(sys){
