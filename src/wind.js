@@ -1,4 +1,5 @@
 
+
 function WindSpeed(wind){
     const speed = wind.speed
     const windSpeedID = document.getElementById("windSpeed")
