@@ -6,7 +6,7 @@ import {WindSpeed, WindSDeg} from "./wind"
 import {Country, Sunset, Sunrise} from "./sys"
 
 let form = document.getElementById("form");
-let dataName, dataTemperature,  dataWeather, dataWind;
+let dataName, dataTemperature,  dataWeather, dataWind, dataSys;
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -35,11 +35,8 @@ form.addEventListener("submit", function(event){
        Sunrise(dataSys)
        Sunset(dataSys)
        Country(dataSys)
-       //Emoj(dataSys)
+
     })
-
-
-
 });
 
 function ViewName(name){
@@ -48,5 +45,3 @@ function ViewName(name){
   nameID.innerHTML = locationName
 }
 
-
-export default script;
