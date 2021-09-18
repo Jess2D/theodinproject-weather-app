@@ -6,7 +6,7 @@ import {WindSpeed, WindSDeg} from "./wind"
 import {Country, Sunset, Sunrise} from "./sys"
 
 let form = document.getElementById("form");
-let dataName, dataTemperature,  dataWeather;
+let dataName, dataTemperature,  dataWeather, dataWind;
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
