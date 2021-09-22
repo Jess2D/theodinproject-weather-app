@@ -5,7 +5,7 @@ function WindSpeed(wind) {
   const speed = wind.speed;
   const windSpeedID = document.getElementById("windSpeed");
   console.log(speed);
-  windSpeedID.innerHTML = "Wind: " + (speed * 3.6).toFixed(2) + "km/h";
+  windSpeedID.innerHTML = "Wind: " + speed + "meter/sec";
 }
 
 /* @description Represents a Wind direction, degrees (meteorological) Function
