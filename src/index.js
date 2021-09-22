@@ -10,7 +10,7 @@ let dataName, dataTemperature,  dataWeather, dataWind, dataSys;
 
 
 /**
- * @description Represents the fetch aplication
+ * @description Represents the fetch aplication for Celsius Temperature.  
  * @version 1.5
  * @author <jess2D>
  * */
@@ -41,7 +41,6 @@ form.addEventListener("submit", function(event){
        Sunrise(dataSys)
        Sunset(dataSys)
        Country(dataSys)
-
     })
 });
 
