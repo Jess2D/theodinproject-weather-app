@@ -1,4 +1,5 @@
-# The Weather App 🌦️ 
+# The Weather App 🌦️
+
 With the Weather App it is possible to search for a specific location and toggle displaying the data in Fahrenheit or Celsius.
 
 This is The Odin Project's [curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/weather-app) from Full Stack Javascript Path
@@ -6,19 +7,24 @@ This is The Odin Project's [curriculum](https://www.theodinproject.com/paths/ful
 :globe_with_meridians: [Live demo](https://htmlpreview.github.io/?https://github.com/Jess2D/theodinproject-weather-app/tree/master/dist/index.html)
 
 ## Assignment
-This application will show the temperature of a location. To fetch weather information we are using [OpenWeatherMap](https://openweathermap.org/current). 
+
+This application will show the temperature of a location. To fetch weather information we are using [OpenWeatherMap](https://openweathermap.org/current).
 
 ## Screenshot
+
 ![Screenshot](https://github.com/Jess2D/theodinproject-weather-app/tree/master/dist/img/Screnshot.PNG)
 
 ## Quickstart guide
-some stuff here 
+
+some stuff here
 
 ## Acknowledgments
+
 - Callbacks
 - Promises
 - .then() functions
 - API(s)
 
-## Roadmap 
+## Roadmap
+
 - Add some ...

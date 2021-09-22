@@ -11,6 +11,7 @@ function Temperature(tempt) {
   .This temperature parameter accounts for the human perception of weather.
  * @param {string} temperature 
 */
+
 function FellsLike(temperature) {
   const fells_Like = temperature["feels_like"];
   const fellsLikeID = document.getElementById("fellsLike");
