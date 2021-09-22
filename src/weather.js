@@ -13,7 +13,7 @@ function Weather(weather) {
 function WeatherIcon(weather) {
   const icon = weather[0].icon;
   const weatherIconID = document.getElementById("weatherIcon");
-  weatherIconID.innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png"/>`;
+  weatherIconID.innerHTML = `<img src="https://openweathermap.org/img/w/${icon}.png"/>`;
 }
 
 module.exports = {
