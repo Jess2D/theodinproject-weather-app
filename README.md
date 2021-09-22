@@ -8,7 +8,7 @@ This is The Odin Project's [curriculum](https://www.theodinproject.com/paths/ful
 
 ## Assignment
 
-This application will show the temperature of a location. To fetch weather information we are using [OpenWeatherMap](https://openweathermap.org/current). This API We collect and process weather data from different sources such as global and local weather models, satellites, radars and a vast network of weather stations.
+This application will show the temperature of a location. To fetch weather information we are using [OpenWeatherMap](https://openweathermap.org/current). This API collect and process weather data from different sources such as global and local weather models, satellites, radars and a vast network of weather stations.
 
 ## Screenshot
 
