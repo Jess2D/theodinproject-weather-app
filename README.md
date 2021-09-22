@@ -12,7 +12,7 @@ This application will show the temperature of a location. To fetch weather infor
 
 ## Screenshot
 
-![Screenshot](https://github.com/Jess2D/theodinproject-weather-app/tree/master/dist/img/Screnshot.PNG)
+![Screenshot](https://github.com/Jess2D/theodinproject-weather-app/blob/master/dist/img/Screnshot.PNG)
 
 ## Quickstart guide
 
