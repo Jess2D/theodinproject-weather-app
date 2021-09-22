@@ -1,3 +1,7 @@
 {
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+"workbench.colorCustomizations": {
+  "titleBar.activeBackground": "#a598ee",
+  "titleBar.inactiveBackground": "#dedaf9"
+}
 }
